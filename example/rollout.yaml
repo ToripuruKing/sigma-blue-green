@@ -2,7 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: rollout-bluegreen
-  namespace: pj-example-ns
 spec:
   replicas: 1
   revisionHistoryLimit: 2
@@ -21,7 +20,7 @@ spec:
         ports:
         - containerPort: 8080
   strategy:
-    blueGreen:
+    blueGreen: 
       activeService: rollout-bluegreen-active
       previewService: rollout-bluegreen-preview
       autoPromotionEnabled: false
