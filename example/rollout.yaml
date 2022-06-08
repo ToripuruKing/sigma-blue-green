@@ -14,11 +14,12 @@ spec:
         app: rollout-bluegreen
     spec:
       containers:
-      - name: rollouts-demo
-        image: argoproj/rollouts-demo:green
+      - name: sigma-cfw-test
+        image: 310118417827.dkr.ecr.ap-northeast-1.amazonaws.com/sigma-cfw-test:blue
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - name: web
+          containerPort: 3000
   strategy:
     blueGreen: 
       activeService: rollout-bluegreen-active
