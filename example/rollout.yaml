@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: sigma-cfw-test
-        image: 310118417827.dkr.ecr.ap-northeast-1.amazonaws.com/sigma-cfw-test:
+        image: 310118417827.dkr.ecr.ap-northeast-1.amazonaws.com/sigma-cfw-test:green
         imagePullPolicy: Always
         ports:
         - name: web
